@@ -29,8 +29,26 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
+* [`ppp banco [FILE]`](#ppp-banco-file)
 * [`ppp hello [FILE]`](#ppp-hello-file)
 * [`ppp help [COMMAND]`](#ppp-help-command)
+* [`ppp login [FILE]`](#ppp-login-file)
+
+## `ppp banco [FILE]`
+
+describe the command here
+
+```
+USAGE
+  $ ppp banco [FILE]
+
+OPTIONS
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  name to print
+```
+
+_See code: [src/commands/banco.ts](https://github.com/fmilani/ppp/blob/v0.0.0/src/commands/banco.ts)_
 
 ## `ppp hello [FILE]`
 
@@ -68,4 +86,20 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.1.0/src/commands/help.ts)_
+
+## `ppp login [FILE]`
+
+describe the command here
+
+```
+USAGE
+  $ ppp login [FILE]
+
+OPTIONS
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  name to print
+```
+
+_See code: [src/commands/login.ts](https://github.com/fmilani/ppp/blob/v0.0.0/src/commands/login.ts)_
 <!-- commandsstop -->

@@ -16,11 +16,11 @@ Pontomais CLI
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g ppp
+$ npm install -g pontomais-mais
 $ ppp COMMAND
 running command...
 $ ppp (-v|--version|version)
-ppp/0.0.0 linux-x64 node-v14.7.0
+pontomais-mais/0.0.1 linux-x64 node-v14.7.0
 $ ppp --help [COMMAND]
 USAGE
   $ ppp COMMAND
@@ -47,7 +47,7 @@ OPTIONS
   -n, --name=name  name to print
 ```
 
-_See code: [src/commands/banco.ts](https://github.com/fmilani/ppp/blob/v0.0.0/src/commands/banco.ts)_
+_See code: [src/commands/banco.ts](https://github.com/fmilani/ppp/blob/v0.0.1/src/commands/banco.ts)_
 
 ## `ppp help [COMMAND]`
 
@@ -78,5 +78,5 @@ OPTIONS
   -h, --help  show CLI help
 ```
 
-_See code: [src/commands/login.ts](https://github.com/fmilani/ppp/blob/v0.0.0/src/commands/login.ts)_
+_See code: [src/commands/login.ts](https://github.com/fmilani/ppp/blob/v0.0.1/src/commands/login.ts)_
 <!-- commandsstop -->

@@ -32,7 +32,6 @@ export default class Banco extends Command {
           uid: 'felipe.milani@evoluservices.com',
         },
         method: 'GET',
-        mode: 'cors',
       }
     )
     const data = await response.json()

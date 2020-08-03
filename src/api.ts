@@ -11,7 +11,6 @@ async function login(email: string, password: string) {
       },
       body: JSON.stringify({ login: email, password }),
       method: 'POST',
-      mode: 'cors',
     }
   )
   const data = await response.json()
@@ -34,7 +33,6 @@ async function session(credentials) {
       uid: credentials.email,
     },
     method: 'GET',
-    mode: 'cors',
   })
   const data = await response.json()
 

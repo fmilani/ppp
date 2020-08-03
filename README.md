@@ -30,9 +30,8 @@ USAGE
 # Commands
 <!-- commands -->
 * [`ppp banco [FILE]`](#ppp-banco-file)
-* [`ppp hello [FILE]`](#ppp-hello-file)
 * [`ppp help [COMMAND]`](#ppp-help-command)
-* [`ppp login [FILE]`](#ppp-login-file)
+* [`ppp login`](#ppp-login)
 
 ## `ppp banco [FILE]`
 
@@ -49,26 +48,6 @@ OPTIONS
 ```
 
 _See code: [src/commands/banco.ts](https://github.com/fmilani/ppp/blob/v0.0.0/src/commands/banco.ts)_
-
-## `ppp hello [FILE]`
-
-describe the command here
-
-```
-USAGE
-  $ ppp hello [FILE]
-
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
-
-EXAMPLE
-  $ ppp hello
-  hello world from ./src/hello.ts!
-```
-
-_See code: [src/commands/hello.ts](https://github.com/fmilani/ppp/blob/v0.0.0/src/commands/hello.ts)_
 
 ## `ppp help [COMMAND]`
 
@@ -87,18 +66,16 @@ OPTIONS
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.1.0/src/commands/help.ts)_
 
-## `ppp login [FILE]`
+## `ppp login`
 
-describe the command here
+Faz o login no Pontomais
 
 ```
 USAGE
-  $ ppp login [FILE]
+  $ ppp login
 
 OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  -h, --help  show CLI help
 ```
 
 _See code: [src/commands/login.ts](https://github.com/fmilani/ppp/blob/v0.0.0/src/commands/login.ts)_

@@ -22,7 +22,7 @@ async function login(email: string, password: string) {
   }
 }
 
-async function session(credentials) {
+async function session(credentials: any) {
   const response = await fetch('https://api.pontomais.com.br/api/session', {
     headers: {
       accept: 'application/json, text/plain, */*',

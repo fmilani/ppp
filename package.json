@@ -62,6 +62,7 @@
   },
   "repository": "fmilani/ppp",
   "scripts": {
+    "build": "tsc -b",
     "lint": "prettier --write src/**/*.ts",
     "postpack": "rm -f oclif.manifest.json",
     "posttest": "eslint . --ext .ts --config .eslintrc",

@@ -1,7 +1,7 @@
 {
   "name": "pontomais-mais",
   "description": "Pontomais CLI",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "author": "Felipe Milani @fmilani",
   "bin": {
     "ppp": "./bin/run"

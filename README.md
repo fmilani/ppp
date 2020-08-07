@@ -20,7 +20,7 @@ $ npm install -g pontomais-mais
 $ ppp COMMAND
 running command...
 $ ppp (-v|--version|version)
-pontomais-mais/0.0.10 linux-x64 node-v14.7.0
+pontomais-mais/0.0.11 linux-x64 node-v14.7.0
 $ ppp --help [COMMAND]
 USAGE
   $ ppp COMMAND
@@ -29,25 +29,20 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`ppp banco [FILE]`](#ppp-banco-file)
+* [`ppp banco`](#ppp-banco)
 * [`ppp help [COMMAND]`](#ppp-help-command)
 * [`ppp login`](#ppp-login)
 
-## `ppp banco [FILE]`
+## `ppp banco`
 
-describe the command here
+Informa o seu banco de horas
 
 ```
 USAGE
-  $ ppp banco [FILE]
-
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  $ ppp banco
 ```
 
-_See code: [src/commands/banco.ts](https://github.com/fmilani/ppp/blob/v0.0.10/src/commands/banco.ts)_
+_See code: [src/commands/banco.ts](https://github.com/fmilani/ppp/blob/v0.0.11/src/commands/banco.ts)_
 
 ## `ppp help [COMMAND]`
 
@@ -78,5 +73,5 @@ OPTIONS
   -h, --help  show CLI help
 ```
 
-_See code: [src/commands/login.ts](https://github.com/fmilani/ppp/blob/v0.0.10/src/commands/login.ts)_
+_See code: [src/commands/login.ts](https://github.com/fmilani/ppp/blob/v0.0.11/src/commands/login.ts)_
 <!-- commandsstop -->

@@ -30,7 +30,7 @@ jobs:
     - run: git config user.email "felmilani@gmail.com"
     - name: Publish package 
       run: yarn publish --non-interactive --new-version patch
-    - name: Push new version to git
-      run: git push
       env:
         NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+    - name: Push new version to git
+      run: git push

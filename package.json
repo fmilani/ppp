@@ -62,10 +62,9 @@
   },
   "repository": "fmilani/ppp",
   "scripts": {
-    "build": "tsc -b",
     "lint": "prettier --write src/**/*.ts",
     "posttest": "eslint . --ext .ts --config .eslintrc",
-    "prepack": "rm -rf lib && ./node_modules/typescript/bin/tsc -b",
+    "prepack": "rm -rf lib && tsc -b",
     "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\"",
     "version": "oclif-dev readme && git add README.md",
     "postversion": "git push && echo \"Pushed version $npm_package_version to github!\""

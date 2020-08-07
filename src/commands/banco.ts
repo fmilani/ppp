@@ -1,6 +1,7 @@
 import { Command, flags } from '@oclif/command'
 import fetch from 'node-fetch'
 import getConfig from '../config'
+import { balance } from '../api'
 
 export default class Banco extends Command {
   static description = 'describe the command here'
@@ -20,27 +21,12 @@ export default class Banco extends Command {
 
     const { credentials, employee } = await getConfig(this.config.configDir)
 
-    const response = await fetch(
-      `https://api.pontomais.com.br/api/employees/statuses/${employee.id}`,
-      {
-        headers: {
-          accept: 'application/json, text/plain, */*',
-          'access-token': credentials.token,
-          'api-version': '2',
-          client: credentials.client,
-          'token-type': 'Bearer',
-          uid: 'felipe.milani@evoluservices.com',
-        },
-        method: 'GET',
-      }
-    )
-    const data = await response.json()
-
-    const signal = data.statuses.time_balance > 0 ? '' : '-'
-    const time_balance = Math.abs(data.statuses.time_balance)
-    const hours = Math.floor(time_balance / 60 / 60)
+    const time_balance = await balance(employee, credentials)
+    const signal = time_balance > 0 ? '' : '-'
+    const abs_balance = Math.abs(time_balance)
+    const hours = Math.floor(abs_balance / 60 / 60)
     const hours_padded = hours < 10 ? `0${hours}` : hours
-    const minutes = (time_balance / 60) % 60
+    const minutes = (abs_balance / 60) % 60
     this.log(`${signal}${hours_padded}:${minutes}`)
   }
 }

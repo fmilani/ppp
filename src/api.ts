@@ -1,5 +1,16 @@
 import fetch from 'node-fetch'
 
+function headers(credentials: any) {
+  return {
+    accept: 'application/json, text/plain, */*',
+    'access-token': credentials.token,
+    'api-version': '2',
+    client: credentials.client,
+    'token-type': 'Bearer',
+    uid: credentials.email,
+  }
+}
+
 async function login(email: string, password: string) {
   const response = await fetch(
     'https://api.pontomais.com.br/api/auth/sign_in',
@@ -14,6 +25,7 @@ async function login(email: string, password: string) {
     }
   )
   const data = await response.json()
+  console.log(data)
 
   return {
     email,
@@ -24,14 +36,7 @@ async function login(email: string, password: string) {
 
 async function session(credentials: any) {
   const response = await fetch('https://api.pontomais.com.br/api/session', {
-    headers: {
-      accept: 'application/json, text/plain, */*',
-      'access-token': credentials.token,
-      'api-version': '2',
-      client: credentials.client,
-      'token-type': 'Bearer',
-      uid: credentials.email,
-    },
+    headers: headers(credentials),
     method: 'GET',
   })
   const data = await response.json()
@@ -41,4 +46,17 @@ async function session(credentials: any) {
   }
 }
 
-export { login, session }
+async function balance(employee: any, credentials: any) {
+  const response = await fetch(
+    `https://api.pontomais.com.br/api/employees/statuses/${employee.id}`,
+    {
+      headers: headers(credentials),
+      method: 'GET',
+    }
+  )
+  const data = await response.json()
+
+  return data.statuses.time_balance
+}
+
+export { login, session, balance }

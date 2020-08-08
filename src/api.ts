@@ -69,7 +69,7 @@ async function time(credentials: any, date: string) {
   )
   const data = await response.json()
 
-  return data.work_day.time_cards.map((time_card) => time_card.time)
+  return data.work_day.time_cards.map((time_card: any) => time_card.time)
 }
 
 export { login, session, balance, time }

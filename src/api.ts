@@ -59,4 +59,17 @@ async function balance(employee: any, credentials: any) {
   return data.statuses.time_balance
 }
 
-export { login, session, balance }
+async function time(credentials: any, date: string) {
+  const response = await fetch(
+    `https://api.pontomais.com.br/api/time_card_control/current/work_days/${date}`,
+    {
+      headers: headers(credentials),
+      method: 'GET',
+    }
+  )
+  const data = await response.json()
+
+  return data.work_day.time_cards.map((time_card) => time_card.time)
+}
+
+export { login, session, balance, time }

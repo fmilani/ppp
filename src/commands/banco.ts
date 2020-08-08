@@ -6,8 +6,6 @@ export default class Banco extends Command {
   static description = 'Informa o seu banco de horas'
 
   async run() {
-    const { args, flags } = this.parse(Banco)
-
     const { credentials, employee } = await getConfig(this.config.configDir)
 
     const time_balance = await balance(employee, credentials)

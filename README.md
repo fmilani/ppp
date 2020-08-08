@@ -32,6 +32,7 @@ USAGE
 * [`ppp banco`](#ppp-banco)
 * [`ppp help [COMMAND]`](#ppp-help-command)
 * [`ppp login`](#ppp-login)
+* [`ppp tempo`](#ppp-tempo)
 
 ## `ppp banco`
 
@@ -74,4 +75,15 @@ OPTIONS
 ```
 
 _See code: [src/commands/login.ts](https://github.com/fmilani/ppp/blob/v0.0.11/src/commands/login.ts)_
+
+## `ppp tempo`
+
+Quanto tempo você já trabalhou hoje
+
+```
+USAGE
+  $ ppp tempo
+```
+
+_See code: [src/commands/tempo.ts](https://github.com/fmilani/ppp/blob/v0.0.11/src/commands/tempo.ts)_
 <!-- commandsstop -->

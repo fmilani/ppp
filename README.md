@@ -20,7 +20,7 @@ $ npm install -g pontomais-mais
 $ ppp COMMAND
 running command...
 $ ppp (-v|--version|version)
-pontomais-mais/0.0.11 linux-x64 node-v14.7.0
+pontomais-mais/0.0.12 linux-x64 node-v14.7.0
 $ ppp --help [COMMAND]
 USAGE
   $ ppp COMMAND
@@ -43,7 +43,7 @@ USAGE
   $ ppp banco
 ```
 
-_See code: [src/commands/banco.ts](https://github.com/fmilani/ppp/blob/v0.0.11/src/commands/banco.ts)_
+_See code: [src/commands/banco.ts](https://github.com/fmilani/ppp/blob/v0.0.12/src/commands/banco.ts)_
 
 ## `ppp help [COMMAND]`
 
@@ -74,7 +74,7 @@ OPTIONS
   -h, --help  show CLI help
 ```
 
-_See code: [src/commands/login.ts](https://github.com/fmilani/ppp/blob/v0.0.11/src/commands/login.ts)_
+_See code: [src/commands/login.ts](https://github.com/fmilani/ppp/blob/v0.0.12/src/commands/login.ts)_
 
 ## `ppp tempo`
 
@@ -85,5 +85,5 @@ USAGE
   $ ppp tempo
 ```
 
-_See code: [src/commands/tempo.ts](https://github.com/fmilani/ppp/blob/v0.0.11/src/commands/tempo.ts)_
+_See code: [src/commands/tempo.ts](https://github.com/fmilani/ppp/blob/v0.0.12/src/commands/tempo.ts)_
 <!-- commandsstop -->

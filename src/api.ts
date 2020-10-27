@@ -1,13 +1,17 @@
 import fetch from 'node-fetch'
+import { v4 as uuidv4 } from 'uuid'
 
 function headers(credentials: any) {
   return {
+    'content-type': 'application/json;charset=UTF-8',
     accept: 'application/json, text/plain, */*',
     'access-token': credentials.token,
     'api-version': '2',
     client: credentials.client,
     'token-type': 'Bearer',
     uid: credentials.email,
+    uuid: credentials.uuid,
+    origin: 'https://app.pontomaisweb.com.br',
   }
 }
 
@@ -25,12 +29,12 @@ async function login(email: string, password: string) {
     }
   )
   const data = await response.json()
-  console.log(data)
 
   return {
     email,
     token: data.token,
     client: data.client_id,
+    uuid: uuidv4(),
   }
 }
 
@@ -72,4 +76,43 @@ async function time(credentials: any, date: string) {
   return data.work_day.time_cards.map((time_card: any) => time_card.time)
 }
 
-export { login, session, balance, time }
+async function local() {
+  const response = await fetch('https://freegeoip.app/json/', {
+    headers: {
+      accept: 'application/json',
+      'content-type': 'application/json',
+    },
+  })
+
+  const data = await response.json()
+
+  return data
+}
+
+async function punch(credentials: any, local: any) {
+  const response = await fetch(
+    'https://api.pontomais.com.br/api/time_cards/register',
+    {
+      headers: headers(credentials),
+      body: JSON.stringify({
+        time_card: {
+          latitude: local.latitude,
+          longitude: local.longitude,
+          address: local.address,
+          original_latitude: local.latitude,
+          original_longitude: local.longitude,
+          original_address: local.address,
+        },
+        _path: '/meu_ponto/registro_de_ponto',
+        _appVersion: '0.10.32',
+      }),
+      method: 'POST',
+    }
+  )
+
+  const data = await response.json()
+
+  return data
+}
+
+export { login, session, balance, time, local, punch }

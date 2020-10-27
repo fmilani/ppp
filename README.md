@@ -31,7 +31,9 @@ USAGE
 <!-- commands -->
 * [`ppp banco`](#ppp-banco)
 * [`ppp help [COMMAND]`](#ppp-help-command)
+* [`ppp local`](#ppp-local)
 * [`ppp login`](#ppp-login)
+* [`ppp ponto`](#ppp-ponto)
 * [`ppp tempo`](#ppp-tempo)
 
 ## `ppp banco`
@@ -62,6 +64,17 @@ OPTIONS
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.1.0/src/commands/help.ts)_
 
+## `ppp local`
+
+Obtém sua localização a ser usada no ponto e a salva nas configurações
+
+```
+USAGE
+  $ ppp local
+```
+
+_See code: [src/commands/local.ts](https://github.com/fmilani/ppp/blob/v0.0.11/src/commands/local.ts)_
+
 ## `ppp login`
 
 Faz o login no Pontomais
@@ -75,6 +88,17 @@ OPTIONS
 ```
 
 _See code: [src/commands/login.ts](https://github.com/fmilani/ppp/blob/v0.0.12/src/commands/login.ts)_
+
+## `ppp ponto`
+
+Bate o ponto no Pontomais
+
+```
+USAGE
+  $ ppp ponto
+```
+
+_See code: [src/commands/ponto.ts](https://github.com/fmilani/ppp/blob/v0.0.11/src/commands/ponto.ts)_
 
 ## `ppp tempo`
 

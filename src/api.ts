@@ -59,6 +59,7 @@ async function balance(employee: any, credentials: any) {
     }
   )
   const data = await response.json()
+  if (data.error) throw new Error(data.error)
 
   return data.statuses.time_balance
 }
@@ -72,6 +73,7 @@ async function time(credentials: any, date: string) {
     }
   )
   const data = await response.json()
+  if (data.error) throw new Error(data.error)
 
   return data.work_day.time_cards.map((time_card: any) => time_card.time)
 }
@@ -111,6 +113,7 @@ async function punch(credentials: any, local: any) {
   )
 
   const data = await response.json()
+  if (data.error) throw new Error(data.error)
 
   return data
 }

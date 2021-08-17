@@ -20,7 +20,7 @@ $ npm install -g pontomais-mais
 $ ppp COMMAND
 running command...
 $ ppp (-v|--version|version)
-pontomais-mais/0.0.15 linux-x64 node-v14.17.4
+pontomais-mais/0.0.15 linux-x64 node-v15.1.0
 $ ppp --help [COMMAND]
 USAGE
   $ ppp COMMAND
@@ -34,6 +34,7 @@ USAGE
 * [`ppp local`](#ppp-local)
 * [`ppp login`](#ppp-login)
 * [`ppp ponto`](#ppp-ponto)
+* [`ppp pontos`](#ppp-pontos)
 * [`ppp tempo`](#ppp-tempo)
 
 ## `ppp banco`
@@ -99,6 +100,17 @@ USAGE
 ```
 
 _See code: [src/commands/ponto.ts](https://github.com/fmilani/ppp/blob/v0.0.15/src/commands/ponto.ts)_
+
+## `ppp pontos`
+
+Mostra os seus pontos de hoje
+
+```
+USAGE
+  $ ppp pontos
+```
+
+_See code: [src/commands/pontos.ts](https://github.com/fmilani/ppp/blob/v0.0.15/src/commands/pontos.ts)_
 
 ## `ppp tempo`
 

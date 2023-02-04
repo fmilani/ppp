@@ -20,7 +20,7 @@ $ npm install -g pontomais-mais
 $ ppp COMMAND
 running command...
 $ ppp (-v|--version|version)
-pontomais-mais/0.0.16 linux-x64 node-v14.17.4
+pontomais-mais/0.0.17 linux-x64 node-v16.19.0
 $ ppp --help [COMMAND]
 USAGE
   $ ppp COMMAND
@@ -46,7 +46,7 @@ USAGE
   $ ppp banco
 ```
 
-_See code: [src/commands/banco.ts](https://github.com/fmilani/ppp/blob/v0.0.16/src/commands/banco.ts)_
+_See code: [src/commands/banco.ts](https://github.com/fmilani/ppp/blob/v0.0.17/src/commands/banco.ts)_
 
 ## `ppp help [COMMAND]`
 
@@ -74,7 +74,7 @@ USAGE
   $ ppp local
 ```
 
-_See code: [src/commands/local.ts](https://github.com/fmilani/ppp/blob/v0.0.16/src/commands/local.ts)_
+_See code: [src/commands/local.ts](https://github.com/fmilani/ppp/blob/v0.0.17/src/commands/local.ts)_
 
 ## `ppp login`
 
@@ -88,7 +88,7 @@ OPTIONS
   -h, --help  show CLI help
 ```
 
-_See code: [src/commands/login.ts](https://github.com/fmilani/ppp/blob/v0.0.16/src/commands/login.ts)_
+_See code: [src/commands/login.ts](https://github.com/fmilani/ppp/blob/v0.0.17/src/commands/login.ts)_
 
 ## `ppp ponto`
 
@@ -99,7 +99,7 @@ USAGE
   $ ppp ponto
 ```
 
-_See code: [src/commands/ponto.ts](https://github.com/fmilani/ppp/blob/v0.0.16/src/commands/ponto.ts)_
+_See code: [src/commands/ponto.ts](https://github.com/fmilani/ppp/blob/v0.0.17/src/commands/ponto.ts)_
 
 ## `ppp pontos`
 
@@ -110,7 +110,7 @@ USAGE
   $ ppp pontos
 ```
 
-_See code: [src/commands/pontos.ts](https://github.com/fmilani/ppp/blob/v0.0.16/src/commands/pontos.ts)_
+_See code: [src/commands/pontos.ts](https://github.com/fmilani/ppp/blob/v0.0.17/src/commands/pontos.ts)_
 
 ## `ppp tempo`
 
@@ -121,5 +121,5 @@ USAGE
   $ ppp tempo
 ```
 
-_See code: [src/commands/tempo.ts](https://github.com/fmilani/ppp/blob/v0.0.16/src/commands/tempo.ts)_
+_See code: [src/commands/tempo.ts](https://github.com/fmilani/ppp/blob/v0.0.17/src/commands/tempo.ts)_
 <!-- commandsstop -->

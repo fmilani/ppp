@@ -8,6 +8,6 @@ export default class Ponto extends Command {
   async run() {
     const { credentials, local } = await getConfig(this.config.configDir)
     const response = await punch(credentials, local)
-    this.log(response.success)
+    this.log(`Ponto registrado às ${response.untreated_time_card.time}`)
   }
 }

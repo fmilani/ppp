@@ -5,31 +5,30 @@ name: Deploy new package version
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        node-version: [14.x]
+        node-version: [16.x]
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - run: yarn install
-    - run: git config user.name "Felipe Milani"
-    - run: git config user.email "felmilani@gmail.com"
-    - name: Publish package 
-      run: yarn publish --non-interactive --new-version patch
-      env:
-        NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
-    - name: Push new version to git
-      run: git push
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: yarn install
+      - run: git config user.name "Felipe Milani"
+      - run: git config user.email "felmilani@gmail.com"
+      - name: Publish package
+        run: yarn publish --non-interactive --new-version patch
+        env:
+          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+      - name: Push new version to git
+        run: git push
